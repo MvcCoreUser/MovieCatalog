@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MovieCatalog.DataAccess.Entities;
@@ -26,7 +27,7 @@ namespace MovieCatalog.DataAccess.EF
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<UserProfile>().HasOne(typeof(ApplicationUser)).WithOne().HasForeignKey(nameof(UserProfile.ApplicationUser));
+            builder.Entity<UserProfile>().HasOne(typeof(IdentityUser)).WithOne().HasForeignKey(nameof(UserProfile.ApplicationUser));
             base.OnModelCreating(builder);
         }
     }
