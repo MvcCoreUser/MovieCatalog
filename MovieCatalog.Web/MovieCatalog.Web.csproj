@@ -8,4 +8,8 @@
     <Folder Include="AppData\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MovieCatalog.BusinessLogic\MovieCatalog.BusinessLogic.csproj" />
+  </ItemGroup>
+
 </Project>
